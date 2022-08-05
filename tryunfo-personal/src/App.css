@@ -1,0 +1,511 @@
+/* ajustar classes de todos os elementos */
+
+@font-face {
+  font-family: narutin;
+  src: url('../fonts/njnaruto.ttf');
+}
+
+* {
+  font-family: narutin , serif;
+}
+
+body {
+  background: fixed;
+  background-image: url('./images-src/nightValley.jpeg');
+  /* background-size: cover; */
+  color: white;
+}
+
+.mainDiv {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.head {
+  font-size: 3em;
+  height: 300px;
+  justify-content: center;
+  width: 100%;
+}
+
+.titleLogo {
+  transform: scale(0.7);
+}
+
+.titleTrunfo {
+  height: 220px;
+  left: 26.5%;
+  position: absolute;
+  top: -30px;
+  transform: rotateZ(-15deg) scale(0.7);
+  width: 360px;
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  background-image: radial-gradient(white, rgb(196, 196, 196), rgb(75, 75, 75));
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 370px;
+  padding: 3.5%;
+  position: relative;
+  width: 100%;
+}
+
+.cards > *:not( .cardImg ) {
+  position: absolute;
+}
+
+.cardImg {
+  width: 100%;
+  max-height: 100%;
+}
+
+.cardName {
+  left: 5%;
+  right: 60%;
+  top: 0;
+}
+
+.cardRarity {
+  font-size: 1.2em;
+  right: 5%;
+  top: 2%;
+}
+
+.cardDescript {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.45);
+  bottom: 5%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: black;
+  height: 7%;
+  left: 0;
+  width: 100%;
+}
+
+.trunfoImg {
+  left: 20px;
+  max-height: 90px;
+  max-width: 120px;
+  position: absolute;
+  top: 30%;
+  transform: rotateZ(-5deg);
+}
+
+.atributesContainer {
+  max-width: 32px;
+  right: 5%;
+  top: 30%;
+}
+
+.attImageContainer {
+  max-width: 32px;
+}
+
+.attImage {
+  max-height: 32px;
+  max-width: 32px;
+}
+
+.ninjutsuImage {
+  height: 70px;
+  margin-bottom: -10px;
+  width: 50px;
+}
+
+.attValue {
+  margin-top: 5px;
+}
+
+.myForm {
+  align-items: center;
+  -webkit-backdrop-filter: blur(0.2px);
+  backdrop-filter: blur(0.6px);
+  background: rgba(31, 31, 31, 0.557);
+  border: 1px solid white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  height: 100%;
+  width: 20%;
+}
+
+.formTitle {
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  height: 40px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.saveBtn {
+  background-color: rgba(0, 0, 0, 0.855);
+  border-radius: 16px;
+  box-shadow: 2px 2px 2px rgba(140, 140, 140, 0.825);
+  color: white;
+  font-size: 1em;
+  height: 35px;
+  margin-top: 10px;
+  padding-top: 5px;
+  width: 130px;
+}
+
+.saveBtn:hover {
+  cursor: pointer;
+}
+
+/* .statsContainer {
+  background-color: rgb(0, 126, 236);
+} */
+
+.stats {
+  background-color: none;
+  border: none;
+  height: 50px;
+  padding-left: 4px;
+  padding-top: 4px;
+  text-align: center;
+}
+
+.statsInput {
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding-left: 17px;
+  text-align: center;
+  width: 50px;
+}
+
+.info {
+  gap: 2vh;
+  margin: 10px;
+  text-align: left;
+}
+
+.infoInput {
+  border-radius: 5px;
+  height: 23px;
+  width: 300px;
+}
+
+.superTrunfoInput {
+  bottom: 0;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.trunfoExistsText {
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.rankTrunfoContainer {
+  justify-content: space-between;
+}
+
+.rankInput {
+  gap: 2vh;
+  height: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 150px;
+}
+
+.rankInfo {
+  margin-left: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.addCardContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 600px;
+}
+
+.myCardsContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.savedCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+
+  /* max-height: 600px; */
+  width: 100%;
+}
+
+.savedCardsContainer > div {
+  align-items: center;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 32%;
+}
+
+.savedCardsContainer .cards {
+  height: 500px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.filtersContainer {
+  align-items: center;
+  align-self: flex-start;
+  -webkit-backdrop-filter: blur(4.7px);
+  backdrop-filter: blur(4.7px);
+  background: rgba(0, 0, 0, 0.76);
+  border: 1px solid black;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  height: 15vh;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.filtersTitle {
+  font-size: 2.5em;
+}
+
+.filterH5 {
+  margin-bottom: 10%;
+  margin-top: 0;
+}
+
+.filters {
+  text-align: center;
+}
+
+/* JOGO */
+.gameContainer {
+  margin-top: 10%;
+  position: relative;
+  width: 100%;
+}
+
+.gameTitle {
+  align-self: center;
+  background-color: rgba(172, 172, 172, 0.68);
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px black;
+  font-size: 50px;
+  height: 80px;
+  padding-top: 5px;
+  position: absolute;
+  text-shadow: 4px 4px 4px black;
+  top: -150px;
+  width: 30%;
+}
+
+.playersContainer {
+  height: 700px;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  position: relative;
+}
+
+.players {
+  max-height: 600px;
+  width: 350px;
+}
+
+.gameButtons {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  padding-top: 7px;
+  width: 190px;
+}
+
+.gameButtons:active {
+  background-color: white;
+  border: 2px solid white;
+  color: black;
+}
+.gameButtons:hover {
+  cursor: pointer;
+}
+
+.buttonsContainer {
+  align-items: center;
+  bottom: 20%;
+  gap: 1em;
+  justify-content: center;
+  left: 45%;
+  position: absolute;
+  /* top: 30%; */
+}
+
+.versusImg {
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  width: 200px;
+}
+
+/* escolha de atributos */
+.chooseContainer {
+  align-self: center;
+  gap: 3em;
+  position: absolute;
+  top: -15px;
+  width: 700px;
+}
+
+.chooseButtons {
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  color: black;
+  font-size: 20px;
+  height: 35px;
+  padding-top: 5px;
+}
+
+.chooseButtons:hover {
+  cursor: pointer;
+}
+
+/* ninjutsu */
+#ninjutsuButton {
+  background-image: linear-gradient(rgb(193, 222, 247), rgb(85, 85, 167));
+  border: 2px solid rgb(126, 167, 245);
+}
+
+/* taijutsu */
+#taijutsuButton {
+  background-image: linear-gradient(rgb(255, 200, 200), rgb(143, 69, 69));
+  border: 2px solid rgb(245, 173, 173);
+}
+
+/* genjutsu */
+#genjutsuButton {
+  background-image: linear-gradient(rgb(218, 254, 205), rgb(116, 167, 86));
+  border: 2px solid rgb(209, 239, 178);
+}
+
+/* pontos dos jogadores */
+.pointsContainer {
+  align-self: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 1%;
+  width: 90%;
+
+  /* height: 200px; */
+}
+
+.playersPoints {
+  background-color: rgba(22, 22, 22, 0.708);
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px black;
+  height: 120px;
+  text-shadow: 2px 2px 2px black;
+  width: 180px;
+}
+
+.playersPoints > p {
+  color: rgb(255, 132, 66);
+  font-size: 30px;
+  margin-top: 5px;
+  width: 150px;
+}
+
+.points {
+
+  /* background-image: ;
+  background-color: rgba(0, 0, 0, 0.475);
+  border: 8px solid rgb(255, 93, 6);
+  border-radius: 100%;
+  box-shadow: 3px 3px 3px black;
+  box-sizing: border-box;
+  height: 100px;
+  width: 100px; */
+  color: rgb(255, 93, 6);
+  font-size: 40px;
+  margin-top: -20px;
+  padding-top: 3px;
+}
+
+/* BACKGROUND POR RARIDADE */
+.genin {
+  background-image: radial-gradient(rgb(255, 233, 178) 20%, rgb(255, 181, 42), rgb(255, 72, 0));
+}
+
+.chuunin {
+  background-image: radial-gradient(rgb(178, 208, 255) 20%, rgb(124, 172, 255), rgb(0, 56, 147));
+}
+
+.jounin {
+  background-image: radial-gradient(rgb(206, 250, 196) 20%, rgb(157, 248, 118), rgb(18, 78, 0));
+}
+
+.anbu {
+  background-image: radial-gradient(rgb(241, 211, 255) 20%, rgb(226, 137, 250), rgb(75, 0, 105));
+}
+
+.sennin {
+  background-image: radial-gradient(rgb(255, 249, 213), rgb(251, 246, 166), rgb(171, 154, 1));
+}
+
+.kage {
+  background-image: radial-gradient(rgb(250, 255, 206) 20%, rgb(237, 253, 147), rgb(123, 135, 0));
+}
+
+.legendary {
+  background-image: radial-gradient(rgb(226, 201, 255) 20%, rgb(194, 136, 255), rgb(64, 0, 124));
+}
+
+.renegade {
+  background-image: radial-gradient(white, rgb(196, 196, 196), rgb(17, 17, 17));
+}
+
+.akatsuki {
+  background-image: radial-gradient(rgb(255, 209, 209) 20%, rgb(255, 140, 140), rgb(126, 2, 2));
+}
